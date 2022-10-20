@@ -1,5 +1,9 @@
 var result = "";
 
+function display(value) {
+    document.getElementById("result").value += value;
+}
+
 function add(a, b) {
     result = a + b;
 }
