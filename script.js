@@ -81,4 +81,5 @@ function multiply() {
 
 function divide() {
     result = parseInt(first) / parseInt(second);
+    result = result.toFixed(3);
 }
