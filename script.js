@@ -8,16 +8,24 @@ const equalsButton = document.querySelector('.equals');
 const divideButton = document.querySelector('.equals');
 const timesButton = document.querySelector('.equals');
 const equalsButton = document.querySelector('.equals');
-const previousOperand = document.querySelector('.previous-operand');
-const currentOperand = document.querySelector('.current-operand');
+const previousOperandText = document.querySelector('.previous-operand');
+const currentOperandText = document.querySelector('.current-operand');
 
 
 class Calculator {
     constructor(previousOperand, currentOperand) {
         this.previousOperand = previousOperand;
         this.currentOperand  = currentOperand;
+        this.clear();
+    }
+    clear() {
+        this.currentOperand = '';
+        this.previousOperand = '';
+        this.operation = undefined;
     }
 }
+
+
 function display(value) {
     document.getElementById("result").value += value;
     valueb += value;
