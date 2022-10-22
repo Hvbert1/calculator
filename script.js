@@ -3,6 +3,20 @@ var second = "";
 var current = "";
 var result ="";
 var displayRes="";
+var operation = "";
+
+function operatePlus() {
+    operation = "plus";
+}
+function operateMinus() {
+    operation = "minus";
+}
+function operateDivide() {
+    operation = "divide";
+}
+function operateTimes() {
+    operation = "times";
+}
 
 function display(value) {
     document.getElementById("result").value += value;
@@ -26,7 +40,18 @@ function store() {
 }
 
 function operate() {
-    add();
+    if(operation == "plus") {
+        add();
+    }
+    else if (operation == "divide") {
+        divide();
+    }
+    else if (operation == "minus") {
+        subtract();
+    }
+    else if (operation == "times") {
+        multiply();
+    }
     console.log(result);
     display(result);
     displayRes = result;
@@ -46,14 +71,14 @@ function add() {
     result = parseInt(first) + parseInt(second);
 }
 
-function subtract(a, b) {
-    result =  a - b;
+function subtract() {
+    result = parseInt(first) - parseInt(second);
 }
 
-function multiply(a, b) {
-    result = a * b;
+function multiply() {
+    result = parseInt(first) * parseInt(second);
 }
 
-function divide(a, b) {
-    result = a / b;
+function divide() {
+    result = parseInt(first) / parseInt(second);
 }

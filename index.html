@@ -10,10 +10,10 @@
         <input class="display-box" type="text" id="result" disabled />
         <input class="display-box2" type="text" id="result2" disabled />
         <div class ="btns">
-            <button id="plus" onclick=" display('+'), store()">+</button>
-            <button id="minus" onclick="subtract(), store(), display('-')">-</button>
-            <button id="times" onclick="multiply(), store(), display('×')">×</button>
-            <button id="over" onclick="divide(), store(), display('÷')">÷</button>
+            <button id="plus" onclick=" display('+'), operatePlus(), store()">+</button>
+            <button id="minus" onclick="display('-'),  operateMinus(), store()">-</button>
+            <button id="times" onclick=" display('×'), operateTimes(), store()">×</button>
+            <button id="over" onclick=" display('÷'), operateDivide(), store()">÷</button>
             <button id="equals" onclick="display('='), store(), operate(), displayResult()">=</button>
         </div>
         <div class="digits">
