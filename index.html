@@ -7,16 +7,14 @@
     </head>
 
     <body>
-        <div class="display">
-            <div id="previous-operand"></div>
-            <div id="current-operand"></div>
-        </div>
+        <input class="display-box" type="text" id="result" disabled />
+        <input class="display-box2" type="text" id="result2" disabled />
         <div class ="btns">
             <button id="plus" onclick=" display('+'), store()">+</button>
             <button id="minus" onclick="subtract(), store(), display('-')">-</button>
             <button id="times" onclick="multiply(), store(), display('×')">×</button>
             <button id="over" onclick="divide(), store(), display('÷')">÷</button>
-            <button id="equals" onclick="display('='), store(), operate()">=</button>
+            <button id="equals" onclick="display('='), store(), operate(), displayResult()">=</button>
         </div>
         <div class="digits">
             <button id="0" value="0" onclick="display('0')">0</button>
