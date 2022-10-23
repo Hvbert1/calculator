@@ -1,0 +1,24 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 700px;
+    gap: 10px;
+}
+
+.digits {
+    display: grid;
+    grid-template-columns: auto auto auto ; 
+    grid-template-rows: auto auto auto;
+    gap: 10%;
+}
+
+button {
+    border: none;
+    padding: 15px 32px;
+    background-color: #CBAC44;
+    border-radius: 5px;
+}
+
