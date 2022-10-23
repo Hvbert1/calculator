@@ -9,13 +9,17 @@
 
     <body>
         <div class ="calculator">
-            Equation: <input class="display-box" type="text" id="result" disabled />
-            Ans: <input class="display-box2" type="text" id="result2" disabled />
+            <div id="header">Calculator</div>
+            <div id="equation">Equation</div>
+            <input class="display-box" type="text" id="result" disabled />
+            <div id="answer">Answer:</div>
+            <input class="display-box2" type="text" id="result2" disabled />
             <div class ="btns">
                 <button id="plus" onclick=" display('+'), operatePlus(), store()">+</button>
                 <button id="minus" onclick="display('-'),  operateMinus(), store()">-</button>
                 <button id="times" onclick=" display('×'), operateTimes(), store()">×</button>
                 <button id="over" onclick=" display('÷'), operateDivide(), store()">÷</button>
+                <button id="reset" onclick=" reset()">AC</button>
             </div>
             <div class="digits">
                 <button id="0" value="0" onclick="display('0')">0</button>

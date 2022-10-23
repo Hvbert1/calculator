@@ -87,3 +87,8 @@ function divide() {
         result = result.toFixed(3);
     }
 }
+
+function reset() {
+    clear();
+    document.getElementById("result2").value = "";
+}

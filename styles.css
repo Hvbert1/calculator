@@ -1,24 +1,47 @@
 .calculator {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: space-evenly;
     width: 500px;
-    height: 700px;
-    gap: 10px;
+    height: 600px;
+    gap: 5px;
+    background-color: grey;
 }
-
+.btns {
+    display: flex;
+    justify-content: space-around;
+}
 .digits {
     display: grid;
     grid-template-columns: auto auto auto ; 
     grid-template-rows: auto auto auto;
-    gap: 10%;
+    gap: 5%;
 }
+
 
 button {
     border: none;
     padding: 15px 32px;
     background-color: #CBAC44;
     border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px
 }
 
+input {
+    width: 98%;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#header {
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+}
+
+#answer, #equation{
+    font-size: 30px;
+}
