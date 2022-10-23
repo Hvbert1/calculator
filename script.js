@@ -68,19 +68,19 @@ function clear() {
 }
 
 function add() {
-    result = parseInt(first) + parseInt(second);
+    result = parseFloat(first) + parseFloat(second);
 }
 
 function subtract() {
-    result = parseInt(first) - parseInt(second);
+    result = parseFloat(first) - parseFloat(second);
 }
 
 function multiply() {
-    result = parseInt(first) * parseInt(second);
+    result = parseFloat(first) * parseFloat(second);
 }
 
 function divide() {
-    result = parseInt(first) / parseInt(second);
+    result = parseFloat(first) / parseFloat(second);
     if(parseInt(first) % parseInt(second) == 0) {
         result = parseInt(first) / parseInt(second);
     } else {
