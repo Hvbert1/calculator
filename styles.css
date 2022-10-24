@@ -18,8 +18,14 @@
     gap: 5%;
 }
 
-
-button {
+.btns button {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 40px;
+}
+.digits button {
     border: none;
     padding: 15px 32px;
     background-color: #CBAC44;
@@ -34,9 +40,10 @@ input {
     height: 50px;
     font-size: 30px;
     font-weight: bold;
+    color: darkcyan;
 }
 
-#header {
+.calculator #header {
     font-size: 50px;
     font-weight: bolder;
     color: white;
