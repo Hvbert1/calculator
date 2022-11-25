@@ -38,7 +38,7 @@ function storeOperation() {
 }
 
 function operate() {
-    if(prevOperation != undefined) {
+    if(a != null && b != null) {
         if(prevOperation == "plus") {
             add();
         }
@@ -51,9 +51,11 @@ function operate() {
         else if (prevOperation == "times") {
             multiply();
         }
+        prevOperation = nextOperation;
+        a = result;
+        b = undefined;
+        displayRes = result;
     }
-    console.log(result);
-    displayRes = result;
 }
 
 function clear() {
@@ -92,15 +94,6 @@ function reset() {
     curr = "";
 }
 
-// const btnDigits = document.querySelectorAll('.digits')
-
-// btnDigits.forEach(btn => {
-//     btn.addEventListener('click', event => {
-//         console.log(event.target.value);
-//     });
-//     check();
-// });
-
 function clearCurrent() {
     curr = ""; //current value
     document.getElementById("result").value = "";
@@ -110,15 +103,15 @@ const btnOperators = document.querySelectorAll('.btns')
 
 btnOperators.forEach(btn => {
     btn.addEventListener('click', event => {
-        if(prevOperation == null) {
-            current_operation = event.target.id;
-        }
-        else {
-            nextOperation = event.target.id;
-        }
+        operation = event.target.id;
+        console.log(operation);
         store();
-        operate();
-        clearCurrent();
+        storeOperation();
+        if(operation != undefined) {
+            operate();
+        }
+        reset();
         displayResult();
-    });
+    }
+    );
 });
