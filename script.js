@@ -1,11 +1,11 @@
 var a = null;
 var b;
 var curr = ""; //current value
-var result = "";
-var displayRes="";
 var prevOperation = null;
 var nextOperation;
 var currOperation;
+var displayRes="";
+
 
 function display(value) {
     document.getElementById("result").value += value;
@@ -22,9 +22,11 @@ function store() {
     if(a == null) {
         a = curr;
         curr = "";
+        console.log("a: " + a);
     }
     else {
         b = curr;
+        console.log("b: " + b);
     }
 }
 
@@ -51,6 +53,7 @@ function operate() {
         else if (prevOperation == "times") {
             multiply();
         }
+        console.log("result:" + result);
         prevOperation = nextOperation;
         a = result;
         b = undefined;
@@ -90,7 +93,7 @@ function divide() {
 }
 
 function reset() {
-    document.getElementById("result2").value = "";
+    document.getElementById("result").value = "";
     curr = "";
 }
 
@@ -98,11 +101,10 @@ const btnOperators = document.querySelectorAll('.btns')
 
 btnOperators.forEach(btn => {
     btn.addEventListener('click', event => {
-        operation = event.target.id;
-        console.log(operation);
+        currOperation = event.target.id;
         store();
         storeOperation();
-        if(operation != undefined) {
+        if(currOperation != undefined) {
             operate();
         }
         reset();
