@@ -15,10 +15,10 @@
             <div id="answer">Answer:</div>
             <input class="display-box2" type="text" id="result2" disabled />
             <div class ="btns">
-                <button id="plus" onclick=" display('+'), operatePlus(), store()">+</button>
-                <button id="minus" onclick="display('-'),  operateMinus(), store()">-</button>
-                <button id="times" onclick=" display('×'), operateTimes(), store()">×</button>
-                <button id="over" onclick=" display('÷'), operateDivide(), store()">÷</button>
+                <button id="plus" value="+">+</button>
+                <button id="minus" value="-">-</button>
+                <button id="times" value="x">×</button>
+                <button id="over" value="/">÷</button>
                 <button id="reset" onclick=" reset()">AC</button>
             </div>
             <div class="digits">
@@ -33,7 +33,7 @@
                 <button id="8" value="8" onclick="display('8')">8</button>
                 <button id="9" value="9" onclick="display('9')">9</button>
                 <button id="10" value="." onclick="display('.')">.</button>
-                <button id="equals" onclick="display('='), store(), operate(), displayResult()">=</button>
+                <button id="equals" onclick="store(), operate(), displayResult()">=</button>
             </div>
         </div>
     </body>
