@@ -94,11 +94,6 @@ function reset() {
     curr = "";
 }
 
-function clearCurrent() {
-    curr = ""; //current value
-    document.getElementById("result").value = "";
-}
-
 const btnOperators = document.querySelectorAll('.btns')
 
 btnOperators.forEach(btn => {
