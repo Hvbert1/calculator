@@ -5,6 +5,7 @@ var result = "";
 var displayRes="";
 var prevOperation = null;
 var nextOperation;
+var currOperation;
 
 function display(value) {
     document.getElementById("result").value += value;
@@ -27,16 +28,14 @@ function store() {
     }
 }
 
-// function storeOperation(event) {
-//     if(operation == null) {
-//         current_operation = event.target.id;
-//         console.log("first Op: " + operation);
-//     }
-//     else {
-//         operation2 = event.target.id;
-//         console.log("second Op: " + operation2);
-//     }
-// }
+function storeOperation() {
+    if(prevOperation == null) {
+        prevOperation = currOperation;
+    }
+    else {
+        nextOperation = currOperation;
+    }
+}
 
 function operate() {
     if(prevOperation != undefined) {
@@ -89,8 +88,8 @@ function divide() {
 }
 
 function reset() {
-    clear();
     document.getElementById("result2").value = "";
+    curr = "";
 }
 
 // const btnDigits = document.querySelectorAll('.digits')
@@ -115,7 +114,7 @@ btnOperators.forEach(btn => {
             current_operation = event.target.id;
         }
         else {
-            operation2 = event.target.id;
+            nextOperation = event.target.id;
         }
         store();
         operate();
