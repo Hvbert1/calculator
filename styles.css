@@ -5,7 +5,9 @@
     width: 500px;
     height: 600px;
     gap: 5px;
-    background-color: grey;
+    background-color: #FEA889;
+    padding: 5px;
+    border-radius: 5px;
 }
 .btns {
     display: flex;
@@ -24,11 +26,12 @@
     font-size: 16px;
     font-weight: bold;
     padding: 15px 40px;
+    background-color: #8BCACA;
 }
 .digits button {
     border: none;
     padding: 15px 32px;
-    background-color: #CBAC44;
+    background-color: #FFD8C5;
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
@@ -47,8 +50,15 @@ input {
     font-size: 50px;
     font-weight: bolder;
     color: white;
+    text-shadow: 2px 2px #8BCACA;
 }
 
 #answer, #equation{
     font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px #8BCACA;
+}
+
+.btns button:focus {
+    background-color: whitesmoke;
 }
